@@ -11,15 +11,16 @@ public class Zadatak4 {
 //		je aktivan kao parametre metode.Metoda nista ne vraca
 
 	public static void main(String[] args) {
-		podaciKorisnika("0508842768927", "Selena", "Ravodanovic", "1990");
+		podaciKorisnika("0508842768927", "Selena", "Ravodanovic", "1990", true);
 
 	}
 	public static void podaciKorisnika(String jmbg, String ime, String prezime,
-			String godinaRodjenja) {
+			String godinaRodjenja, boolean aktivan) {
 		System.out.println("JMBG: " + jmbg);
 		System.out.println("Ime: " + ime);
 		System.out.println("Prezime: " + prezime);
 		System.out.println("God. rodjenja: " + godinaRodjenja);
+		System.out.println("Aktivan: " + aktivan);
 		System.out.println();
 		
 	}
