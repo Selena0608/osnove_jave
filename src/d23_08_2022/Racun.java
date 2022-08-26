@@ -15,14 +15,17 @@ public class Racun {
 
 	private String brojRacuna;
 	private String ime;
-	private int stanjeNaRacunu;
+	private double stanjeNaRacunu;
+	
+	
 
-	public Racun(String brojRacuna, String ime, int stanjeNaRacunu) {
-		this.brojRacuna = brojRacuna;
-		this.ime = ime;
+
+	public Racun(double stanjeNaRacunu) {
 		this.stanjeNaRacunu = stanjeNaRacunu;
 	}
 
+	
+	
 	public String getBrojRacuna() {
 		return brojRacuna;
 	}
@@ -39,23 +42,23 @@ public class Racun {
 		this.ime = ime;
 	}
 
-	public int getStanjeNaRacunu() {
+	public double getStanjeNaRacunu() {
 		return stanjeNaRacunu;
 	}
 
-	public int novoStanjeRacuna(int vrednost) {
-		return this.stanjeNaRacunu - vrednost;
-		if(this.stanjeNaRacunu < 0) {
-			this.stanjeNaRacunu = 0;
+	
+	public void novoStanjeRacuna(double visinaTransakcije) {
+		if(this.stanjeNaRacunu > 0 && this.stanjeNaRacunu > visinaTransakcije) {
+			this.stanjeNaRacunu = this.stanjeNaRacunu - visinaTransakcije;
 	}
 	
 		
-	public void print(){
+	public void print() {
 		System.out.println(this.ime + " - " + this.brojRacuna);
 		System.out.println("Stanje na racunu je: " + this.stanjeNaRacunu + "rsd.");
 	}
 		
-		
+
 		
 	
 	}

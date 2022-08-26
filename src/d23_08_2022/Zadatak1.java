@@ -59,23 +59,32 @@ public class Zadatak1 {
 		nizKartona.add(deveti);
 		nizKartona.add(deseti);
 
+		for(int i = 0; i < nizKartona.size(); i++) {
+			nizKartona.get(i).stampaj();
+		}
+		
 		int suma = 0;
+		int prosek = 0;
 		for (int i = 0; i < nizKartona.size(); i++) {
 			suma = suma + nizKartona.get(i).getOcena();
+			prosek = suma / nizKartona.size();
 		}
+		System.out.println("Prosek ocena je: " + prosek);
+		
 
-		double prosekOcena = 1.0 * suma / nizKartona.size();
 
 		int brojPolozenih = 0;
 		int sumaPolozenih = 0;
+		int prosekPolozenih = 0;
 
 		for (int i = 0; i < nizKartona.size(); i++) {
 			if (nizKartona.get(i).polozenIspit() == true) {
 				sumaPolozenih = sumaPolozenih + nizKartona.get(i).getOcena();
 				brojPolozenih++;
 			}
-		}
-
+		} 
+		prosekPolozenih = sumaPolozenih / brojPolozenih;
+		System.out.println("Prosecna ocena polozenih ispita: " + prosekPolozenih);
 	}
 
 }
