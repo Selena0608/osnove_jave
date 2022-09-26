@@ -17,9 +17,12 @@ public class Zadatak1 {
 		
 		magacioner1.zaposliUSektor(nabavka);
 		magacioner1.zaposliUSektor(prodaja);
-		
+		System.out.println(magacioner1);
+		System.out.println(magacioner1.plataRadnika());
+		System.out.println();
 		menadzer1.zaposliUSektor(finansije);
+		System.out.println(menadzer1);
+		System.out.println(menadzer1.plataRadnika());
 		
 	}
-
 }
